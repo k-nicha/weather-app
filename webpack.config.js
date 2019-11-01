@@ -3,7 +3,12 @@ const path = require('path');
 module.exports = {
     entry: './src/index.js',
     devtool: 'source-map',
-    
+    resolve: {
+      modules: [ // dont use relative paths for imports
+        path.resolve('./node_modules'),
+        path.resolve('./src'),
+      ]
+    },
     output: {
       path: path.resolve(__dirname, 'src'),
       filename: 'bundle.js'

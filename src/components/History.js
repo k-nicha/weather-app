@@ -1,7 +1,9 @@
 import React from 'react'
 
-const History = (props) => {
-  return null
+const History = () => {
+  return <div id='historyContainer' className='flex-item'> 
+    
+  </div>
 }
 
 export default History

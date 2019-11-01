@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../styles/search.css'
+import 'styles/search.css'
 //import { connect } from 'react-redux'
 // import { searchCity } from '../redux/actions/searchCity'
 

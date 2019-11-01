@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Results = (props) => {
+const Results = () => {
 
   return <div id='resultsContainer' className='flex-item centered'> 
     

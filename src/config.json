@@ -1,0 +1,3 @@
+{
+  "fetchApi": "https://samples.openweathermap.org/data/2.5/forecast?q={city},us&appid=c8e9513b1eaecfeab5d48b906abce1b4"
+}
