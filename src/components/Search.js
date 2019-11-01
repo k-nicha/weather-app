@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import 'styles/search.css'
 import { connect } from 'react-redux'
 import { searchCity } from 'redux/actions/searchCity'
+import ReactTooltip from 'react-tooltip'
 
 const handleSubmit = (city, searchCity, setError) => {
   if (!city) {
@@ -17,12 +18,14 @@ const Search = (props) => {
 
   const style = error ? 'form-control search-input search-input-error' : 'form-control search-input'
 
-  return <div id='searchContainer' className='flex-item'> 
+  return <div id='searchContainer' className='flex-item'>
+    {error && <ReactTooltip place='right' type='warning' />}
     <input
       id='inputCity'
       type='text'
       className={style}
       placeholder='City'
+      data-tip={error}
       value={city}
       onChange={(e) => {
         setCity(e.target.value)
