@@ -28,7 +28,7 @@ const Search = (props) => {
   return <div id='searchContainer' className='flex-item'>
     <div id='search' className='subtitle'> Search for a city </div>
     {/* Also display error as tooltip on hover */}
-    {error && <ReactTooltip place='right' type='warning' />}
+    {error && <ReactTooltip place='right' type='warning' effect='solid' />}
     <input
       id='inputCity'
       type='text'
