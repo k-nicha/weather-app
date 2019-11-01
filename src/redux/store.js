@@ -15,6 +15,4 @@ const store = createStore(
     applyMiddleware(logger, thunk)
 )
 
-console.log(store.getState())
-
 export default store
