@@ -14,7 +14,7 @@ class Home extends React.Component {
 
     render () {
         return  (
-            <div id='main-container' className='flex-container'>
+            <div id='mainContainer' className='flex-container'>
                 <Search />
                 <Results />
                 <History />
