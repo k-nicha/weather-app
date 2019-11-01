@@ -1,7 +1,10 @@
 import React from 'react'
 
 const Results = (props) => {
-  return null
+
+  return <div id='resultsContainer' className='flex-item centered'> 
+    
+  </div>
 }
 
 export default Results

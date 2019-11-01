@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../styles/search.css'
 //import { connect } from 'react-redux'
 // import { searchCity } from '../redux/actions/searchCity'
 
@@ -8,14 +9,14 @@ const Search = () => {
   return <div id='searchContainer' className='flex-item'> 
     <input
       id='inputCity'
-      className='form-control'
+      className='form-control search-input'
       placeholder='City'
       value={city}
       onChange={(e) => setCity(e.target.value)}
     />
     <button
       id='searchForecast'
-      className='form-control'>
+      className='form-control search-button'>
       Search Forecast
     </button>
   </div>
