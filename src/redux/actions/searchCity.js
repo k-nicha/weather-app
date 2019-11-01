@@ -8,11 +8,7 @@ export function searchCity (city) {
 
     dispatch({ type: 'FETCH_FORECAST_PENDING', payload: null, isLoading: true })
     
-    axios({
-      method: 'get',
-      url: url,
-      withCredentials: true
-    })
+    axios.get(url)
       .then((response) => {
         dispatch({ type: 'FETCH_FORECAST_SUCCESSFUL', payload: response, isLoading: false })
       }).catch((err) => {
