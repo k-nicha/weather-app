@@ -12,7 +12,7 @@ const handleSubmit = (city, searchCity, setError) => {
 }
 
 const Search = (props) => {
-  const [city, setCity] = useState(null)
+  const [city, setCity] = useState('')
   const [error, setError] = useState(null)
 
   const style = error ? 'form-control search-input search-input-error' : 'form-control search-input'
