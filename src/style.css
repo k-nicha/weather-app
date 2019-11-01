@@ -4,10 +4,19 @@ body {
 
 .page-title {
     width: 100%;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
     font-size: 2rem;
     font-weight: 400;
-    color: #495057; 
+    color: #495057;
+    border-bottom: 1px solid #c6d9ec;
+}
+
+.subtitle {
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #495057;
 }
 
 .flex-container {
@@ -23,6 +32,7 @@ body {
     flex-grow: 1;
     flex-direction: column;
     padding: 1rem;
+    margin: 1rem;
     border-radius: 0.25rem;
     box-shadow: 0rem 0.06rem 0.6rem #c6d9ec;
     background-color: #fff;
@@ -30,8 +40,6 @@ body {
 }
 
 .centered {
-    flex-grow: 3;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    width: 50%;
 }
 

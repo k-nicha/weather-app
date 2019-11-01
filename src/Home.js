@@ -1,6 +1,6 @@
 import React from 'react'
 import Search from 'components/Search'
-import Results from 'components/Results'
+import Forecast from 'components/Forecast'
 import History from 'components/History'
 import Title from 'components/Title'
 
@@ -9,7 +9,7 @@ const Home = () => {
     <div id='mainContainer' className='flex-container'>
       <Title />
       <Search />
-      <Results />
+      <Forecast />
       <History />
     </div>
   )
