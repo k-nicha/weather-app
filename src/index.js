@@ -8,16 +8,16 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 const app = document.getElementById('app')
 
 const Routes = () => {
-    return (
-        <Router>
-            <Switch>
-                <Route exact path='/' component={Home} />
-            </Switch>
-        </Router>
-    )
+  return (
+    <Router>
+      <Switch>
+        <Route exact path='/' component={Home} />
+      </Switch>
+    </Router>
+  )
 }
 
 ReactDOM.render(
-    <Provider store={store}>
-        <Routes />
-    </Provider>, app)
+  <Provider store={store}>
+    <Routes />
+  </Provider>, app)

@@ -2,6 +2,10 @@
   margin-bottom: 1rem;
 }
 
+.search-input-error {
+  border: 1px solid red;
+}
+
 .search-button {
   margin-bottom: 1rem;
 }
