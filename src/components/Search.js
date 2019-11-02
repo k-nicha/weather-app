@@ -4,10 +4,11 @@ import { connect } from 'react-redux'
 import { searchCity } from 'redux/actions/searchCity'
 import ReactTooltip from 'react-tooltip'
 
-const handleSubmit = (city, searchCity, setError) => {
+const handleSubmit = (e, city, searchCity, setError) => {
   /** 
    * Handles data submit and validates input string 
   */
+  e.preventDefault()
   if (!city) {
     setError('Please input a city name')
   } else {
@@ -29,27 +30,29 @@ const Search = (props) => {
     <div id='search' className='subtitle'> Search for a city </div>
     {/* Also display error as tooltip on hover */}
     {error && <ReactTooltip place='right' type='warning' effect='solid' />}
-    <input
-      id='inputCity'
-      type='text'
-      className={style}
-      placeholder='City'
-      data-tip={error}
-      value={city}
-      onChange={(e) => {
-        // Save city name in state
-        setCity(e.target.value)
-        // Reset error state whenever there's an input change so the element styles are re-initialized
-        setError(false)
-      }}
-      onKeyPress={() => handleSubmit(city, props.searchCity, setError)}
-    />
-    <button
-      id='searchForecast'
-      className='form-control search-button btn btn-info'
-      onClick={() => handleSubmit(city, props.searchCity, setError)}>
-      Search Forecast
-    </button>
+    <form>
+      <input
+        id='inputCity'
+        type='text'
+        className={style}
+        placeholder='City'
+        data-tip={error}
+        value={city}
+        onChange={(e) => {
+          // Save city name in state
+          setCity(e.target.value)
+          // Reset error state whenever there's an input change so the element styles are re-initialized
+          setError(false)
+        }}
+      />
+      <input
+        id='searchForecast'
+        type='submit'
+        value='Search Forecast'
+        className='form-control search-button btn btn-info cursor'
+        onClick={(e) => handleSubmit(e, city, props.searchCity, setError)}
+      />
+    </form>
   </div>
 }
 
