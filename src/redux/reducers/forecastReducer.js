@@ -1,7 +1,7 @@
 export function forecastReducer (state = {
   isPending: false,
   error: null,
-  data: []
+  data: null
 }, action) {
   switch (action.type) {
     case 'FETCH_FORECAST_PENDING': {
@@ -24,7 +24,7 @@ export function forecastReducer (state = {
       return {
         ...state,
         isPending: false,
-        data: [],
+        data: null,
         error: action.payload
       }
     }

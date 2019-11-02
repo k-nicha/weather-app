@@ -19,6 +19,13 @@ body {
     color: #495057;
 }
 
+.text {
+    width: 100%;
+    font-size: 1rem;
+    color: #495057;
+    text-align: center;
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;
