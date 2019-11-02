@@ -12,4 +12,4 @@ A simple weather application which shows a 5-day forecast for a chosen city. Bui
 Source-map-loader package is used to display the source in the dev console. All folders are served from *./src* folder so we can use absolute paths for imports.
 
 Author: K.Nicha
-Development time: 5 hours
+Development time: 4 hours
