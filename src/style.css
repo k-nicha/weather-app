@@ -3,6 +3,8 @@ body {
 }
 
 .page-title {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     margin-bottom: 2rem;
     font-size: 2rem;
@@ -50,3 +52,10 @@ body {
     width: 50%;
 }
 
+.colored-border {
+    border: 1px solid #17a2b8;
+}
+
+.cursor {
+    cursor: pointer;
+}

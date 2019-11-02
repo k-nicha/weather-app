@@ -1,4 +1,5 @@
 import React from 'react'
+import 'styles/table.css'
 
 const Data = ({cityName, days}) => {
   const dates = []
@@ -64,7 +65,7 @@ const Data = ({cityName, days}) => {
 
   return <React.Fragment>
     <div id='dataContainer' className='subtitle'>
-      {cityName}
+      {`${cityName} - the weather in the next five days`}
     </div>
     <table className='table'>
       <thead>
