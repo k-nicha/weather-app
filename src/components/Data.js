@@ -19,7 +19,7 @@ const Data = ({cityName, days}) => {
     return {
       day: currDay,
       time: currHour,
-      temp: [day.main.temp_max, day.main.temp_min]
+      temp: day.main.temp
     }
   })
 
@@ -32,16 +32,14 @@ const Data = ({cityName, days}) => {
     let minTempTime = null
     for (let j = 0; j < temps.length; j++) {
       if (dates[i] === temps[j].day) {
-        /* replace previous written value and convert to celsius
-        and round down to two decimal points */
-        if (temps[j].temp[0] > maxTemp) {
-          maxTemp = Math.floor((temps[j].temp[0] - 273) *100) / 100
+        /* replace previous written value */
+        if (temps[j].temp > maxTemp) {
+          maxTemp = temps[j].temp
           maxTempTime = temps[j].time
         }
-        /* replace previous written value and convert to celsius
-        and round down to two decimal points */
-        if (temps[j].temp[1] < minTemp) {
-          minTemp = Math.floor((temps[j].temp[1] - 273) *100) / 100
+        /* replace previous written value */
+        if (temps[j].temp < minTemp) {
+          minTemp = temps[j].temp
           minTempTime = temps[j].time
         }
 
@@ -54,11 +52,13 @@ const Data = ({cityName, days}) => {
 
   let tableData = []
   for (let date in finalResults) {
+    /* converts temperatures to celsius
+    and round down to two decimal points */
     tableData.push(<tr>
       <td>{date}</td>
-      <td>{finalResults[date].maxTemp}</td>
+      <td>{Math.floor((finalResults[date].maxTemp - 273) *100) / 100}</td>
       <td>{finalResults[date].maxTempTime}</td>
-      <td>{finalResults[date].minTemp}</td>
+      <td>{Math.floor((finalResults[date].minTemp - 273) *100) / 100}</td>
       <td>{finalResults[date].minTempTime}</td>
     </tr>)
   }
