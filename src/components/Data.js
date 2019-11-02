@@ -11,7 +11,7 @@ const Data = ({cityName, days}) => {
     const currDay = arr[0]
     const currHour = arr[1]
 
-    // create separate araray only for days with no timestamp
+    // create separate array only for days with no timestamp
     if (!dates.includes(currDay)) {
       dates.push(currDay)
     }
@@ -51,14 +51,33 @@ const Data = ({cityName, days}) => {
   }
 
   let tableData = []
+
+  // Find hottest day
+  // Also worksfor multiple days with the same highest temperature
+  let unsorted = []
+  for (let date in finalResults) {
+    unsorted.push(finalResults[date].maxTemp)
+  }
+  const sorted = unsorted.sort((lo, hi) => { return hi - lo })
+  const highestTemp = Math.floor((sorted[0] - 273) *100) / 100
+
   for (let date in finalResults) {
     /* converts temperatures to celsius
     and round down to two decimal points */
-    tableData.push(<tr>
+    const highest = ''
+    const max = Math.floor((finalResults[date].maxTemp - 273) *100) / 100
+    const min = Math.floor((finalResults[date].minTemp - 273) *100) / 100
+    if (highestTemp === max) {
+      highest = 'warning'
+    }
+    tableData.push(<tr className={highest}>
       <td>{date}</td>
-      <td>{Math.floor((finalResults[date].maxTemp - 273) *100) / 100}</td>
+      <td>
+        {max}
+        {highest && <img className='table-img' src='images/sunny.png' />}
+      </td>
       <td>{finalResults[date].maxTempTime}</td>
-      <td>{Math.floor((finalResults[date].minTemp - 273) *100) / 100}</td>
+      <td>{min}</td>
       <td>{finalResults[date].minTempTime}</td>
     </tr>)
   }

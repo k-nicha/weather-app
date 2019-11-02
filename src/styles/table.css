@@ -5,3 +5,13 @@
 .table td, .table th {
   border-top: 1px solid #17a2b8;
 }
+
+.table-img {
+  margin-left: 1rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.warning {
+  color: orange;
+}
