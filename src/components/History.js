@@ -19,7 +19,7 @@ const History = (props) => {
     cities = list.map((el, index) => {
       return <li id={index} className='list-group-item cursor colored-border'
         onClick={(e) => retreiveCityPrognosis(e, list)}>
-        {`${el.city.name}, Population: ${el.city.population}`}
+        {`${el.city.name}, Population: ${el.city.population} - click to view forecast`}
       </li>
     })
   }
