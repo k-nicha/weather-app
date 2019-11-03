@@ -9,7 +9,7 @@ In the rightmost section, all user searches are being saved, and with a button c
 
 # Specs
 A simple weather application which shows a 5-day forecast for a chosen city. Built with react and redux JS frameworks. Uses thunk middleware to dispatch async actions. Bootstrap is used as a basic styling layer and can be found in the styles folder. All data is state-driven with the exception of the one api call to openweathermaps.
-Source-map-loader package is used to display the source in the dev console. All folders are served from *./src* folder so we can use absolute paths for imports.
+Source-map-loader package is used to display the source in the dev console. All folders are served from *./src* folder so we can use absolute paths for imports. Webpack is used for bundling and babel for transpiling the JSX code.
 
 Author: K.Nicha
 Development time: 4 hours
