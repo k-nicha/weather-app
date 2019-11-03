@@ -74,7 +74,7 @@ const Data = ({cityName, days}) => {
       <td>{date}</td>
       <td>
         {max}
-        {highest && <img className='table-img' src='images/sunny.png' />}
+        {highest && <img className='table-img' src='images/temperature.png' />}
       </td>
       <td>{finalResults[date].maxTempTime}</td>
       <td>{min}</td>
